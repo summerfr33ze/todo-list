@@ -23,9 +23,32 @@ body {
 }
 
 .project-panel {
+    display: flex;
+    flex-direction: column;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    background-color: grey;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
 }
 
 
+.add-project {
+    border: 2px solid;
+    background-color: #fff;
+    font-size: 32px;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+}
 
+.form-container{
+    display: none
+}
+
+.popup-form {
+    
+}

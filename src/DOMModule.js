@@ -1,15 +1,14 @@
 function DOMModule() {
+const projectPanel = document.querySelector(".project-panel")
+const toDoArea = document.querySelector(".todo-area")
+const addProject = document.querySelector(".add-project")
+const formContainer = document.querySelector("form-container")
+const form = document.querySelector(form)
+const input = document.querySelector("popup-input")
+const add = document.querySelector("add")
+const cancel = document.querySelector("cancel")
 
-const body = document.querySelector("body")
-const header = document.createElement("div")
-header.className = "header"
-body.appendChild(header)
-const projectPanel = document.createElement("div")
-projectPanel.className = "project-panel"
-body.appendChild(projectPanel)
-const toDoArea = document.createElement("div")
-toDoArea.className = "todo-area"
-body.appendChild(toDoArea)
+
 
 }
 
