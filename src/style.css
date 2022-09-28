@@ -14,9 +14,13 @@ body {
     grid-row: 1 / 2;
     background-color: black;
     color: white;
+    font-size: 3em;
+
 }
 
 .todo-area {
+    display:flex;
+    justify-content: space-between;
     border-left: 1px solid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -45,10 +49,29 @@ body {
     border-radius: 50%;
 }
 
-.form-container{
-    display: none
+.add-todo{
+    border: 2px solid;
+    background-color: #fff;
+    font-size: 32px;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
 }
 
-.popup-form {
-    
+.add-project:hover, .add-todo:hover{
+    background-color: grey;
 }
+
+.project-button{
+    background-color: navy;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    gap: 5px;
+  
+}
+
