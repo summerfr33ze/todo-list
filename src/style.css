@@ -58,10 +58,6 @@ body {
     border-radius: 50%;
 }
 
-.add-project:hover, .add-todo:hover{
-    background-color: grey;
-}
-
 .project-button{
     background-color: navy;
     border: none;

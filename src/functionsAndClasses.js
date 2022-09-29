@@ -1,16 +1,26 @@
 
+import { projectContainer } from "./index.js"
+import { projectArray } from "./index.js"
+import { todoContainer } from "./index.js"
 
-
-function displayProjects() {
+export function displayProjects() {
     projectContainer.innerHTML = ""
-    projectArray.forEach((project, index) => {
+    projectArray.forEach((NewProject, index) => {
     const  projectButton = document.createElement("button")
+    projectButton.textContent = NewProject.title
+    projectButton.dataset.projectIndex = `${index}`
     projectButton.style.display = "block"
-    projectButton.textContent = project
     projectButton.className = "project-button"
     projectContainer.appendChild(projectButton)
-    projectButton.dataset.projectIndex = `${index}`
-    createTodoArray()
+
+
+    projectButton.addEventListener("click", () => {
+        todoContainer.innerHTML = ""
+        const NewProjectx
+        
+    })
+    
+   
     })
     }
 
@@ -24,50 +34,18 @@ function displayProjects() {
 //we select the specific todo array
 // we load the specific todos into the page
 
-function createTodoArray() {
-    const todoArray = []
-    todoArray.push(arrayOfTodoArrays)
-    todoArray.dataset.todoArrayIndex = `${index}`
 
-}
 
 // search for todoArray with index that matches the project button and display it
 
 
-function displayTodos(){
+export function displayTodos(){
 todoContainer.innerHTML = ""
-arrayOfTodoArrays.forEach((todoArray, index) => {
-    if (todoArray.dataset.todoArrayIndex = i){
-        todoArray.forEach((todo, index) => {
-            const todoDiv = document.createElement("div")
-            todoDiv.className = "todo-div"
-            todoContainer.appendChild(todoDiv)
-            for(let key in Todo){
-                const entry = document.createElement("div")
-                todoDiv.appendChild(entry)
-                entry.textContent = `${key} : ${Todo[key]} `
-            }
-            const todoDeleteButton = document.createElement("button")
-            todoDeleteButton.className = "delete"
-            todoDiv.appendChild(todoDeleteButton)
-            
-            todoDeleteButton.textContent = "Delete"
-                todoDeleteButton.addEventListener("click", (event) => {
-                todoDeleteButton.innerHTML = ""
-                const attr = todoDeleteButton.parentElement.getAttribute("data-todo-index")
-                todoArray.splice(attr, 1)
-                displayTodos()
-                })
-            })
-    }
-    else { return }
-})
-
-
+currentProject = 
 
 }
 
-class Todo {
+export class Todo {
     constructor(Title,Description,DueDate,Priority){
         this.title = Title
         this.description = Description
@@ -76,5 +54,11 @@ class Todo {
         }
     }
 
+export class Project {
+    constructor(Title){
+        this.title = Title
+        this.todoArray = []
+    }
 
+}
 

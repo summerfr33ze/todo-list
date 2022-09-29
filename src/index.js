@@ -1,11 +1,16 @@
 import "./style.css"
+import { displayProjects } from "./functionsAndClasses.js"
+import { createTodoArray} from "./functionsAndClasses.js"
+import { displayTodos} from "./functionsAndClasses.js"
+import { Todo } from "./functionsandClasses.js"
+import { Project } from "./functionsandClasses.js"
 
 //Areas of the Site
 const projectPanel = document.querySelector(".project-panel")
 const toDoArea = document.querySelector(".todo-area")
 
 // project titles are placed above where form appears
-const projectContainer = document.querySelector(".project-container")
+export const projectContainer = document.querySelector(".project-container")
 const formContainer = document.querySelector(".form-container")
 const projectForm = document.querySelector(".project-form")
 
@@ -24,27 +29,16 @@ const description= document.querySelector(".description")
 const dueDate = document.querySelector(".due-date")
 const priority= document.querySelector(".priority")
 const addTodo = document.querySelector(".add-todo")
-
-
-
-/*function displayTodos(){
-todoContainer.innerHTML = ""
-todoArray.forEach((todo, index) => {
-const todoDiv = document.createElement("div")
-todoDiv.className = "todo-div"
-}
-}
-
-function deleteProject(){
-    const deleteProject = document.createElement("div")
-}
-*/
+export const todoContainer = document.querySelector(".todo-container")
 
 
 
 
-const projectArray = []
-const arrayOfTodoArrays = []
+
+
+
+export const projectArray = []
+
 
 
 // user adds project
@@ -53,8 +47,8 @@ const arrayOfTodoArrays = []
 
 add.addEventListener("click", (event) => {
     event.preventDefault()
-    const project = popupInput.value
-    projectArray.push(project)
+    const NewProject = new Project(popupInput.value)
+    projectArray.push(NewProject)
     displayProjects()
     projectForm.reset()
     
@@ -67,11 +61,7 @@ cancel.addEventListener("click", (event) => {
 
 })
 
-projectButton.addEventListener("click", () => {
-    todoContainer.innerHTML = ""
-    i = projectButton.getAttribute("data-project-index")
-    displayTodos()
-})
+
 
 
 /*
