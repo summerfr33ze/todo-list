@@ -19,11 +19,20 @@ body {
 }
 
 .todo-area {
-    display:flex;
+    display:grid;
     justify-content: space-between;
     border-left: 1px solid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    grid-template-columns: 1fr 8fr;
+}
+
+.title-and-forms {
+    grid-column: 1/2;
+}
+
+.todo-container {
+    grid-column: 2/3;
 }
 
 .project-panel {
@@ -34,29 +43,16 @@ body {
     background-color: grey;
 }
 
-.button-container{
+.container{
     display: flex;
     justify-content: space-between;
 }
 
-
-.add-project {
-    border: 2px solid;
-    background-color: #fff;
-    font-size: 32px;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
+.project-form{
+    border: none;
 }
 
-.add-todo{
-    border: 2px solid;
-    background-color: #fff;
-    font-size: 32px;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 50%;
-}
+
 
 .project-button{
     background-color: navy;
@@ -71,3 +67,27 @@ body {
   
 }
 
+input {
+    size: 100px;
+}
+
+.todo-form {
+    font-size: 2em;
+}
+
+.buttons{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    gap: 5px;
+
+}
+
+fieldset {
+    border: none;
+}

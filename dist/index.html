@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./main.js" defer></script>
+    <script src="./bundle.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <div class="header">To Do List</div>
     <div class="project-panel">
         
-        <div class="button-container">
+        <div class="container">
             <h1>Projects</h1>
         </div>
         <div class="project-container">
@@ -22,16 +22,19 @@
             <fieldset class="text-input">
             <input type="text" class="popup-input">
             </fieldset>
-            <fieldset class="buttons">
-            <button class="add">Add</button>
-            <button class="cancel">Cancel</button>
+            <fieldset >
+            <button class="buttons" id="add">Add</button>
+            <button class="buttons" id="cancel">Cancel</button>
             </fieldset>
         </form>
         </div>
         </div>
     </div>
     <div class="todo-area">
-        <div>To Dos</div>
+        <div class="title-and-forms">
+        <div class="container">
+        <h1>To Dos</h1>
+        </div>
         
         <form class="todo-form">
             <label for="title">Title</label>
@@ -42,10 +45,12 @@
             <input type="text" class="due-date">
             <label for="priority">Priority</label>
             <input type="text" class="priority">
-            <button class="add-todo">Submit</button>
+            <input type="submit" class="buttons" id="add-todo">
         </form>  
-            
-        <div class="form-container"></div>
+        </div>
+        
+        
+        <div class="todo-container"></div>
        
     </div>
     
