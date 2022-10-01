@@ -1,6 +1,5 @@
 import "./style.css"
 import { displayProjects } from "./functions-and-classes.js"
-import { createTodoArray} from "./functions-and-classes.js"
 import { displayTodos} from "./functions-and-classes.js"
 import { Todo } from "./functions-and-classes.js"
 import { Project } from "./functions-and-classes.js"
@@ -30,7 +29,7 @@ const description= document.querySelector(".description")
 const dueDate = document.querySelector(".due-date")
 const priority= document.querySelector(".priority")
 const addTodo = document.querySelector("#add-todo")
-const todoForm = document.querySelector("todo-form")
+const todoForm = document.querySelector(".todo-form")
 export const todoContainer = document.querySelector(".todo-container")
 
 
@@ -66,10 +65,12 @@ cancel.addEventListener("click", (event) => {
 
 addTodo.addEventListener("click", (event) => {
     event.preventDefault()
+
     const todo = new Todo (title.value,description.value,dueDate.value, priority.value)
     projectArray.forEach((NewProject, index) => {
         if (index === currentProject){
             NewProject.todoArray.push(todo)
+            console.log(NewProject.todoArray)
 
         }
         else {return}

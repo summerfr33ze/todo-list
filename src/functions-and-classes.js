@@ -30,6 +30,7 @@ projectArray.forEach((NewProject, index) => {
     if (index === currentProject){
         NewProject.todoArray.forEach((todo, index) => {
             const todoDiv = document.createElement("div")
+            console.log(todoDiv)
             todoDiv.className = "todo-div"
             todoContainer.appendChild(todoDiv)
             for (let key in todo){
